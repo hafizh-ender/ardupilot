@@ -27,6 +27,7 @@
 #if HAL_SIM_FLIGHTAXIS_ENABLED
 
 #include <AP_HAL/utility/Socket_native.h>
+#include <AP_HAL/utility/Socket.h>
 
 #include "SIM_Aircraft.h"
 
@@ -199,6 +200,8 @@ private:
     pid_t socket_pid;
     uint32_t sock_error_count;
     double last_recv_sec;
+
+    SocketAPM   matlabSock{true};
 };
 
 
