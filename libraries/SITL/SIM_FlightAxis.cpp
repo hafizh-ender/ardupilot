@@ -402,7 +402,7 @@ void FlightAxis::exchange_data(const struct sitl_input &input)
         float yawRate_DEGpSEC = state.m_yawRate_DEGpSEC;
     } data_to_send;
 
-    matlabSock.sendto(&data_to_send, sideof(data_to_send), '127.0.0.1', 9002);
+    matlabSock.sendto(&data_to_send, sideof(data_to_send), "127.0.0.1", 9002);
 }
 
 
