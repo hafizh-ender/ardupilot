@@ -562,6 +562,17 @@ void FlightAxis::update(const struct sitl_input &input)
     }
 
     report_FPS();
+
+    // send data to matlab
+    data_to_send.currentPhysicsTime_SEC = state.m_currentPhysicsTime_SEC;
+    data_to_send.airspeed_MPS = state.m_airspeed_MPS;
+    data_to_send.velocityBodyU_MPS = state.m_velocityBodyU_MPS;
+    data_to_send.velocityBodyV_MPS = state.m_velocityBodyV_MPS;
+    data_to_send.velocityBodyW_MPS = state.m_velocityBodyW_MPS;
+    data_to_send.propRPM = state.m_propRPM;
+    data_to_send.heliMainRotorRPM = state.m_heliMainRotorRPM;
+
+    matlabSock.sendto(&data_to_send, sideof(data_to_send), "127.0.0.1", 9063);
 }
 
 /*

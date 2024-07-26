@@ -98,6 +98,16 @@ public:
         double m_resetButtonHasBeenPressed;
     } state;
 
+    struct data_to_send {
+        double currentPhysicsTime_SEC;
+        double airspeed_MPS;
+        double velocityBodyU_MPS;
+        double velocityBodyV_MPS;
+        double velocityBodyW_MPS;
+        double propRPM;
+        double heliMainRotorRPM;
+    } data_to_send;
+
     static const uint16_t num_keys = sizeof(state)/sizeof(double);
 
     struct keytable {
