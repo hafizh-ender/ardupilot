@@ -394,15 +394,6 @@ void FlightAxis::exchange_data(const struct sitl_input &input)
         socket_frame_counter++;
         free(reply);
     }
-
-    struct interesting_data {
-        float airspeed_MPS = state.m_airspeed_MPS;
-        float pitchRate_DEGpSEC = state.m_pitchRate_DEGpSEC;
-        float rollRate_DEGpSEC = state.m_rollRate_DEGpSEC;
-        float yawRate_DEGpSEC = state.m_yawRate_DEGpSEC;
-    } data_to_send;
-
-    matlabSock.sendto(&data_to_send, sideof(data_to_send), "127.0.0.1", 9002);
 }
 
 
