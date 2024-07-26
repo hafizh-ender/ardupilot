@@ -572,7 +572,7 @@ void FlightAxis::update(const struct sitl_input &input)
     data_to_send.propRPM = state.m_propRPM;
     data_to_send.heliMainRotorRPM = state.m_heliMainRotorRPM;
 
-    matlabSock.sendto(&data_to_send, sideof(data_to_send), "127.0.0.1", 9063);
+    matlabSock.sendto(&data_to_send, sizeof(data_to_send), "127.0.0.1", 9063);
 }
 
 /*
