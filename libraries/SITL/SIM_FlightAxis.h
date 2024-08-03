@@ -100,12 +100,27 @@ public:
 
     struct data_to_send {
         double currentPhysicsTime_SEC;
+        double accelerationBodyAX_MPS2;
+        double accelerationBodyAY_MPS2;
+        double accelerationBodyAZ_MPS2;
+        double pitchRate_DEGpSEC;
+        double rollRate_DEGpSEC;
+        double yawRate_DEGpSEC;
+        double azimuth_DEG;
+        double inclination_DEG;
+        double roll_DEG;
+        double groundspeed_MPS;
         double airspeed_MPS;
         double velocityBodyU_MPS;
         double velocityBodyV_MPS;
         double velocityBodyW_MPS;
+        double velocityWorldU_MPS;
+        double velocityWorldV_MPS;
+        double velocityWorldW_MPS;
         double propRPM;
         double heliMainRotorRPM;
+        double altitudeASL_MTR;
+        double altitudeAGL_MTR;
     } data_to_send;
 
     static const uint16_t num_keys = sizeof(state)/sizeof(double);

@@ -565,12 +565,27 @@ void FlightAxis::update(const struct sitl_input &input)
 
     // send data to matlab
     data_to_send.currentPhysicsTime_SEC = state.m_currentPhysicsTime_SEC;
+    data_to_send.accelerationBodyAX_MPS2 = state.m_accelerationBodyAX_MPS2;
+    data_to_send.accelerationBodyAY_MPS2 = state.m_accelerationBodyAY_MPS2;
+    data_to_send.accelerationBodyAZ_MPS2 = state.m_accelerationBodyAZ_MPS2;
+    data_to_send.pitchRate_DEGpSEC = state.m_pitchRate_DEGpSEC;
+    data_to_send.rollRate_DEGpSEC = state.m_rollRate_DEGpSEC;
+    data_to_send.yawRate_DEGpSEC = state.m_yawRate_DEGpSEC;
+    data_to_send.azimuth_DEG = state.m_azimuth_DEG;
+    data_to_send.inclination_DEG = state.m_inclination_DEG;
+    data_to_send.roll_DEG = state.m_roll_DEG;
+    data_to_send.groundspeed_MPS = state.m_groundspeed_MPS;
     data_to_send.airspeed_MPS = state.m_airspeed_MPS;
     data_to_send.velocityBodyU_MPS = state.m_velocityBodyU_MPS;
     data_to_send.velocityBodyV_MPS = state.m_velocityBodyV_MPS;
     data_to_send.velocityBodyW_MPS = state.m_velocityBodyW_MPS;
+    data_to_send.velocityWorldU_MPS = state.m_velocityWorldU_MPS;
+    data_to_send.velocityWorldV_MPS = state.m_velocityWorldV_MPS;
+    data_to_send.velocityWorldW_MPS = state.m_velocityWorldW_MPS;
     data_to_send.propRPM = state.m_propRPM;
     data_to_send.heliMainRotorRPM = state.m_heliMainRotorRPM;
+    data_to_send.altitudeASL_MTR = state.m_altitudeASL_MTR;
+    data_to_send.altitudeAGL_MTR = state.m_altitudeAGL_MTR;
 
     matlabSock.sendto(&data_to_send, sizeof(data_to_send), "127.0.0.1", 9063);
 }
