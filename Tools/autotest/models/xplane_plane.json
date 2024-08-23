@@ -19,12 +19,12 @@
     "sim/flightmodel2/wing/aileron1_deg[1]" : { "type" : "angle", "range" : 30, "channel" : 7 },
     
     # elevator, using surface overrides
-    "sim/flightmodel2/wing/elevator1_deg[8]" : { "type" : "angle", "range" : -30, "channel" : 1 },
-    "sim/flightmodel2/wing/elevator1_deg[9]" : { "type" : "angle", "range" : -30, "channel" : 2 },
+    "sim/flightmodel2/wing/elevator1_deg[8]" : { "type" : "angle", "range" : 30, "channel" : 1 },
+    "sim/flightmodel2/wing/elevator1_deg[9]" : { "type" : "angle", "range" : 30, "channel" : 2 },
 
     # left-right motor tilts
-    "sim/aircraft/prop/acf_vertcant[1]" : { "type" : "angle", "range" : -90, "channel" : 9 },
-    "sim/aircraft/prop/acf_vertcant[2]" : { "type" : "angle", "range" : -90, "channel" : 4 },
+    "sim/aircraft/prop/acf_vertcant[1]" : { "type" : "angle", "range" : 90, "channel" : 9 },
+    "sim/aircraft/prop/acf_vertcant[2]" : { "type" : "angle", "range" : 90, "channel" : 4 },
     
     # joystick inputs
     "axis1" : { "type" : "joyaxis", "channel" : 1, "input_min" : 0.2, "input_max" : 0.8 },
