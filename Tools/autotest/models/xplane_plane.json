@@ -8,15 +8,15 @@
     "sim/operation/override/override_throttles" : { "type" : "fixed", "value" : 1 },
 
     # rear throttle
-    "sim/flightmodel/engine/ENGN_thro_use[0]" : { "type" : "range", "range" : 1, "channel" : 7 },
+    "sim/flightmodel/engine/ENGN_thro_use[0]" : { "type" : "range", "range" : 1, "channel" : 8 },
 
     # front throttle
     "sim/flightmodel/engine/ENGN_thro_use[1]" : { "type" : "range", "range" : 1, "channel" : 5 },
     "sim/flightmodel/engine/ENGN_thro_use[2]" : { "type" : "range", "range" : 1, "channel" : 6 },
 
     # aileron, using surface overrides
-    "sim/flightmodel2/wing/aileron1_deg[0]" : { "type" : "angle", "range" : 30, "channel" : 7 },
-    "sim/flightmodel2/wing/aileron1_deg[1]" : { "type" : "angle", "range" : -30, "channel" : 7 },
+    "sim/flightmodel2/wing/aileron1_deg[0]" : { "type" : "angle", "range" : -30, "channel" : 7 },
+    "sim/flightmodel2/wing/aileron1_deg[1]" : { "type" : "angle", "range" : 30, "channel" : 7 },
     
     # elevator, using surface overrides
     "sim/flightmodel2/wing/elevator1_deg[8]" : { "type" : "angle", "range" : -30, "channel" : 1 },
