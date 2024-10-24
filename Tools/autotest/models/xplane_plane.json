@@ -1,9 +1,10 @@
 # XPlane DREF map file for a tilt-tri rotor v-tail plane
 # assumes: left-right Vtail, left-right front motors, left-right motor tilts, aileron
 
-"settings" : { "debug" : 1 },
 
 {
+    "settings" : { "debug" : 1 },
+    
     "sim/operation/override/override_control_surfaces" : { "type" : "fixed", "value" : 1 },
     "sim/operation/override/override_throttles" : { "type" : "fixed", "value" : 1 },
 
